@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent implements OnInit {
+  value3: String | undefined;
 
   constructor() { }
 

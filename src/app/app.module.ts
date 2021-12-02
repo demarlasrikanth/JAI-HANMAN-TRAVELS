@@ -1,26 +1,56 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppComponent} from './app.component';
 
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { UserRegisterComponent } from './user-register/user-register.component';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { BokkingComponent } from './bokking/bokking.component';
+import {UserRegisterComponent} from './user-register/user-register.component';
+import {UserLoginComponent} from './user-login/user-login.component';
+import {BokkingComponent} from './bokking/bokking.component';
 import {TabMenuModule} from "primeng/tabmenu";
+import {AppRoutingModule} from "./app-routing.module";
+import {InputTextModule} from 'primeng/inputtext';
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from "primeng/button";
+import {RippleModule} from "primeng/ripple";
+import {PasswordModule} from 'primeng/password';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {CalendarModule} from 'primeng/calendar';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import {DividerModule} from "primeng/divider";
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import {AvatarModule} from 'primeng/avatar';
+import {AvatarGroupModule} from 'primeng/avatargroup';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserRegisterComponent,
     UserLoginComponent,
-    BokkingComponent
+    BokkingComponent,
+    ContactUsComponent,
+    AdminLoginComponent,
+    UserProfileComponent,
+
   ],
   imports: [
     BrowserModule,
+    TabMenuModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    TabMenuModule
+    InputTextModule,
+    CardModule,
+    ButtonModule,
+    RippleModule,
+    PasswordModule,
+    RadioButtonModule,
+    CalendarModule,
+    DividerModule,
+    AvatarModule,
+    AvatarGroupModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

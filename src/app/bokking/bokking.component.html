@@ -1,1 +1,38 @@
-<p>bokking works!</p>
+<p-card >
+  <form>
+    <div class="radio-header">
+      <h2 style="text-align: center; color: whitesmoke; " >Book Online Cab</h2>
+      <div class="p-field-radiobutton">
+        <input type="radio" id="way" name="category" (change)="radioChangeHandler('way')">
+        <label for="way">OutstationOne-way</label>
+      </div>
+      <div class="p-field-radiobutton">
+        <input type="radio" id="trip"  name="category" (change)="radioChangeHandler('trip')" >
+        <label for="trip">OutstationRound trip</label>
+      </div>
+    </div>
+      <div class="flex justify-content-center ">
+        <input type="text"
+               style="margin:5px 2px; width: 56%;"
+               placeholder="Enter Pick Up Location " pInputText>
+      </div>
+    <div class="flex justify-content-center ">
+    <i class="pi pi-sort-alt" ></i>
+    </div>
+        <div class="flex justify-content-center">
+        <input type="text"
+               style="margin:5px 2px; width: 56%;"
+               placeholder="Enter Drop location" pInputText>
+      </div>
+    <div class="flex justify-content-center" style="margin:5px 2px;">
+      <p-calendar  [showIcon]="true" placeholder="Pick Up Date"></p-calendar>
+    </div>
+      <div class="flex justify-content-center " style="margin:5px 2px;" *ngIf="tripFlag" >
+        <p-calendar [showIcon]="true" placeholder="Return Date" ></p-calendar>
+      </div>
+    <div class="flex justify-content-center ">
+      <button pButton pRipple type="submit" label="Register" class="p-button-outlined p-button-rounded">
+      </button>
+    </div>
+  </form>
+</p-card>

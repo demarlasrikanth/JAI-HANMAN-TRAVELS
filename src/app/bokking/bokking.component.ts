@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-bokking',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bokking.component.css']
 })
 export class BokkingComponent implements OnInit {
+  selectedCategory: any = null;
+  categories: any[] = [{name: 'OutstationOne-way'}, {name: 'OutstationRound trip'}];
+  tripFlag: any;
+   date1: Date | undefined;
 
-  constructor() { }
-
+  constructor() {
+  }
   ngOnInit(): void {
+    this.selectedCategory = this.categories[0];
+
   }
 
+  public radioChangeHandler(type: string): void {
+    console.log('type is    ', type);
+    this.tripFlag = type === 'trip';
+  }
 }

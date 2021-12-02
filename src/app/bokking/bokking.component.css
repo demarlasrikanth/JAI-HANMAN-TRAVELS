@@ -1,0 +1,58 @@
+:host ::ng-deep .p-card {
+  background-color: transparent;
+  opacity: initial;
+  height: 450px;
+  width: 500px;
+  position: absolute;
+  border-radius: 10px;
+  top: 20%;
+  left: 35%;
+  border: 2px solid rgba(50, 50, 50, 0.1);
+  box-shadow: 0 0 20px rgba(8, 7, 16, 0.6);
+  padding: 20px 20px;
+}
+.p-field-radiobutton{
+
+display: inline-block;
+position: relative;
+padding: 0 6px;
+margin: 10px 0 0;
+}
+.p-field-radiobutton label{
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+
+.p-field-radiobutton label:before
+{
+  border-radius: 30px;
+  border: 2px solid #f39f86;
+  background-color: white;
+}
+.p-field-radiobutton input[type=radio]:checked + label:after
+{
+  background:#f39f86;
+}
+input[type="radio" i]{
+  background-color: blueviolet;
+}
+.p-datepicker:not(.p-datepicker-inline) .p-datepicker-header {
+  background: #ffffff;
+}
+.radio-header
+{
+  height: 100px;
+}
+.p-button.p-button-outlined
+{
+  background: white;
+  color: #f39f86;
+}
+.p-button.p-button-outlined:enabled:hover
+{
+  background: #f39f86;
+  color: white;
+}
+
+
