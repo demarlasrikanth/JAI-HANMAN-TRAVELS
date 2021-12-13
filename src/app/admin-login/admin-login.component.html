@@ -1,14 +1,14 @@
 <p-card>
-  <form class="">
+  <form [formGroup]="getadmin" (ngSubmit)="dashboard()">
     <h2 style="text-align: center; color: whitesmoke;" >Login</h2>
     <div class="flex justify-content-center ">
       <span class="p-inputgroup-addon" style><i class="pi pi-user"></i></span>
       <input type="text" placeholder="Username"
-             style="margin:5px 0;"  pInputText>
+             style="margin:5px 0;"  pInputText formControlName="emailId">
     </div>
     <div class="flex justify-content-center " style="margin:5px 0;">
       <span class="p-inputgroup-addon" style><i class="pi pi-lock"></i></span>
-      <p-password placeholder="password"  [toggleMask]="false" [feedback]="false"></p-password>
+      <p-password placeholder="password"  [toggleMask]="true" [feedback]="false" formControlName="password"></p-password>
     </div>
     <div class="flex justify-content-center">
       <button pButton pRipple type="submit" label="login" class="p-button-outlined p-button-rounded">

@@ -1,31 +1,31 @@
 
 <p-card>
-  <form class="">
+  <form [formGroup]="newuser" (ngSubmit)="collectuser()">
     <h2 style="text-align: center; color: whitesmoke; " >SignUp</h2>
 
     <div class="flex justify-content-center ">
       <input type="text"
              style="margin:5px 2px;" class="form-control "
-             placeholder="First Name" pInputText>
+             placeholder="First Name"  formControlName="firstName" pInputText>
       <input type="text"
              style="margin:5px 2px;" class="form-control "
-             placeholder="Last Name" pInputText>
+             placeholder="Last Name" formControlName="lastName" pInputText>
     </div>
     <div class="flex justify-content-center ">
       <input type="text"
              style="margin:5px 2px;" class="form-control "
-             placeholder="Email Id" pInputText>
+             placeholder="Email Id" formControlName="emailId" pInputText>
       <input type="text"
              style="margin:5px 2px; " class="form-control "
-             placeholder="Mobile Number" pInputText>
+             placeholder="Mobile Number" formControlName="phoneNo" pInputText>
     </div>
     <div class="flex justify-content-center ">
-    <input type="text"
+      <p-password
            style="margin:5px 2px;" class="form-control "
-           placeholder="Password" pInputText>
-    <input type="text"
+           placeholder="Password" formControlName="password"  ></p-password>
+      <p-password
            style="margin:5px 2px; " class="form-control "
-           placeholder="Conform Password" pInputText>
+           placeholder="Conform Password" formControlName="cpassword" > </p-password>
     </div>
     <div class="flex justify-content-center ">
       <button pButton pRipple type="submit" label="Register" class="p-button-outlined p-button-rounded">

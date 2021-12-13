@@ -6,6 +6,8 @@ import {UserLoginComponent} from "./user-login/user-login.component";
 import {BokkingComponent} from "./bokking/bokking.component";
 import {ContactUsComponent} from "./contact-us/contact-us.component";
 import {AdminLoginComponent} from "./admin-login/admin-login.component";
+import {UserProfileComponent} from "./user/user-profile/user-profile.component";
+import {AdminDashboardComponent} from "./admin-login/admin-dashboard/admin-dashboard.component";
 
 
 const routes:Routes =[
@@ -30,7 +32,16 @@ const routes:Routes =[
   {
     path:'adminLogin',
     component:AdminLoginComponent
+  },
+  {
+    path:'userProfile',
+    component:UserProfileComponent
+  },
+  {
+    path:'dashboard',
+    component:AdminDashboardComponent
   }
+
 
 ];
 

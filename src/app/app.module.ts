@@ -15,12 +15,18 @@ import {PasswordModule} from 'primeng/password';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {CalendarModule} from 'primeng/calendar';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import {ContactUsComponent} from './contact-us/contact-us.component';
 import {DividerModule} from "primeng/divider";
-import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import {AdminLoginComponent } from './admin-login/admin-login.component';
+import { UserProfileComponent} from './user/user-profile/user-profile.component';
 import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
+import {ReactiveFormsModule,} from "@angular/forms";
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {HttpClientModule} from "@angular/common/http";
+import { AdminDashboardComponent } from './admin-login/admin-dashboard/admin-dashboard.component';
+import {MenuModule} from "primeng/menu";
 
 @NgModule({
   declarations: [
@@ -31,6 +37,7 @@ import {AvatarGroupModule} from 'primeng/avatargroup';
     ContactUsComponent,
     AdminLoginComponent,
     UserProfileComponent,
+    AdminDashboardComponent,
 
   ],
   imports: [
@@ -47,7 +54,12 @@ import {AvatarGroupModule} from 'primeng/avatargroup';
     CalendarModule,
     DividerModule,
     AvatarModule,
-    AvatarGroupModule
+    AvatarGroupModule,
+    ReactiveFormsModule,
+    MessagesModule,
+    MessageModule,
+    HttpClientModule,
+    MenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
