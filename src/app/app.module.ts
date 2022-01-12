@@ -27,6 +27,8 @@ import {MessageModule} from 'primeng/message';
 import {HttpClientModule} from "@angular/common/http";
 import { AdminDashboardComponent } from './admin-login/admin-dashboard/admin-dashboard.component';
 import {MenuModule} from "primeng/menu";
+import { UsersDataComponent } from './admin-login/users-data/users-data.component';
+import {TableModule} from "primeng/table";
 
 @NgModule({
   declarations: [
@@ -38,29 +40,31 @@ import {MenuModule} from "primeng/menu";
     AdminLoginComponent,
     UserProfileComponent,
     AdminDashboardComponent,
+    UsersDataComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    TabMenuModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    InputTextModule,
-    CardModule,
-    ButtonModule,
-    RippleModule,
-    PasswordModule,
-    RadioButtonModule,
-    CalendarModule,
-    DividerModule,
-    AvatarModule,
-    AvatarGroupModule,
-    ReactiveFormsModule,
-    MessagesModule,
-    MessageModule,
-    HttpClientModule,
-    MenuModule,
-  ],
+    imports: [
+        BrowserModule,
+        TabMenuModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        InputTextModule,
+        CardModule,
+        ButtonModule,
+        RippleModule,
+        PasswordModule,
+        RadioButtonModule,
+        CalendarModule,
+        DividerModule,
+        AvatarModule,
+        AvatarGroupModule,
+        ReactiveFormsModule,
+        MessagesModule,
+        MessageModule,
+        HttpClientModule,
+        MenuModule,
+        TableModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

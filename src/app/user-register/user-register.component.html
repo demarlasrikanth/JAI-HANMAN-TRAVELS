@@ -1,38 +1,33 @@
-
 <p-card>
-  <form [formGroup]="newuser" (ngSubmit)="collectuser()">
-    <h2 style="text-align: center; color: whitesmoke; " >SignUp</h2>
+  <form [formGroup]="newuser">
+    <h2 style="text-align: center; color: whitesmoke; ">SignUp</h2>
 
     <div class="flex justify-content-center ">
-      <input type="text"
-             style="margin:5px 2px;" class="form-control "
-             placeholder="First Name"  formControlName="firstName" pInputText>
-      <input type="text"
-             style="margin:5px 2px;" class="form-control "
+      <input type="text" class="form-control "
+             placeholder="First Name" formControlName="firstName" pInputText>
+      <input type="text" class="form-control "
              placeholder="Last Name" formControlName="lastName" pInputText>
     </div>
     <div class="flex justify-content-center ">
-      <input type="text"
-             style="margin:5px 2px;" class="form-control "
+      <input type="text" class="form-control "
              placeholder="Email Id" formControlName="emailId" pInputText>
-      <input type="text"
-             style="margin:5px 2px; " class="form-control "
+      <input type="text" class="form-control "
              placeholder="Mobile Number" formControlName="phoneNo" pInputText>
     </div>
     <div class="flex justify-content-center ">
-      <p-password
-           style="margin:5px 2px;" class="form-control "
-           placeholder="Password" formControlName="password"  ></p-password>
-      <p-password
-           style="margin:5px 2px; " class="form-control "
-           placeholder="Conform Password" formControlName="cpassword" > </p-password>
+      <p-password class="form-control "
+                  placeholder="Password" formControlName="password"></p-password>
+      <p-password class="form-control "
+                  placeholder="Conform Password" formControlName="cpassword"></p-password>
     </div>
     <div class="flex justify-content-center ">
-      <button pButton pRipple type="submit" label="Register" class="p-button-outlined p-button-rounded">
+      <button pButton pRipple (click)="collectuser()" label="Register"
+              class="p-button-outlined p-button-rounded">
       </button>
-    </div><div class="social">
-    <div class="go"><i class="pi pi-google"></i>  Google</div>
-    <div class="fb"><i class="pi pi-facebook"></i>  Facebook</div>
-  </div>
+    </div>
+    <div class="social">
+      <div class="go"><i class="pi pi-google"></i> Google</div>
+      <div class="fb"><i class="pi pi-facebook"></i> Facebook</div>
+    </div>
   </form>
 </p-card>

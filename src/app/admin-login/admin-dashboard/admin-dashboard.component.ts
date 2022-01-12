@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from "primeng/api";
 
+
 @Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
@@ -13,8 +14,8 @@ export class AdminDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label: 'Bookings', icon: 'pi pi-fw pi-car'},
-      {label: 'Users', icon: 'pi pi-fw pi-id-card'},
+      {label: 'Bookings', icon: 'pi pi-fw pi-car' },
+      {label: 'Users', icon: 'pi pi-fw pi-id-card',routerLink:['/users']},
       {label: 'Comments', icon: 'pi pi-fw pi-comments'},
       {label: 'logout', icon: 'pi pi-fw pi-power-off'}
     ];

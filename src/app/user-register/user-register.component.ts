@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../user.service";
 import {Router} from "@angular/router";
+import {UserModel} from "../helpers/usermodel";
 
 
 @Component({
@@ -31,32 +32,45 @@ export class UserRegisterComponent implements OnInit {
         Validators.pattern('^[0-9]*$')]),
       password: new FormControl('', [Validators.required,
         Validators.minLength(5),
-        Validators.maxLength(12)]),
+        Validators.maxLength(20)]),
       cpassword: new FormControl('', [Validators.required])
     });
 
 
-  constructor(private User: UserService,private router: Router) {
+  constructor(private userService: UserService, private router: Router) {
   }
 
   ngOnInit(): void {
+    this.getUsers();
   }
 
   collectuser() {
-    if(this.newuser.controls['password'].value === this.newuser.controls['cpassword'].value && this.newuser.valid){
+    if (this.newuser.valid) {
       console.log(1)
-      this.User.saveNewuser(this.newuser.value).subscribe(() => {
+      const user: UserModel = {
+        email: this.newuser.get('emailId')?.value,
+        password: this.newuser.get('password')?.value,
+        firstName:this.newuser.get('firstName')?.value,
+        lastName:this.newuser.get('lastName')?.value,
+        phoneNo:this.newuser.get('phoneNo')?.value
+      }
+      this.userService.saveNewuser(user).subscribe((res) => {
+        console.log('saveNewuser    ', res)
         this.router.navigate([`/login`]).then(r => {
-          if(r){
-            alert("you register successfully" +"/n" +" please login with your Emailid and Password")
+          if (r) {
+            alert("you register successfully" + "/n" + " please login with your Emailid and Password")
           }
         });
       });
-    }
-    else {
+    } else {
       alert("please fill all requires")
     }
+  }
 
+  private getUsers(): void {
+    this.userService.getList().subscribe(res => {
+      console.log('Response is    ', res);
+    })
   }
 }
 

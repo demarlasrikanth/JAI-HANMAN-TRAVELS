@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "email": "demarlasrikanth@gmail.com",
+      "password": "$2a$10$mU9hJwzCLpVCYyxMN1uofOqAlI3wRElO6IO0IC5q.rqieJfuu0o/S",
+      "firstName": "demarla",
+      "lastName": "demarla",
+      "phoneNo": "demarla",
+      "id": 1
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$cJWplih9ZP4UdgQUn1X5f.Txkv1V7/nulR2.oC4uEWX2WB.DpkLQC",
+      "firstName": "test",
+      "lastName": "test",
+      "phoneNo": "9505233492",
+      "id": 2
+    },
+    {
+      "email": "demarlaammulu@GMAIL.COM",
+      "password": "$2a$10$tgXxi/nbxRtTUctiqcsiPuNcok8zcromuR6O7SMBXnbYxko1BCnty",
+      "firstName": "demarla",
+      "lastName": "ammulu",
+      "phoneNo": "9505233492",
+      "id": 3
+    },
+    {
+      "email": "demarlachandrakala@gmail.com",
+      "password": "$2a$10$Nms0ppktUSYJoZ3Uij1YtuYSM5iQH3iWlNu3aoPKiIhQI3.x99kDC",
+      "firstName": "demarla",
+      "lastName": "chandrakala",
+      "phoneNo": "9886686869",
+      "id": 4
+    },
+    {
+      "email": "sri@gmail.com",
+      "password": "$2a$10$UQx8mum7gD9O9gnVfXea.uIZCf3MdZ59lMzxNEH/dw4MtJRfojgZ6",
+      "firstName": "srikanth",
+      "lastName": "srikanth",
+      "phoneNo": "1345645678",
+      "id": 5
+    }
+  ]
+}

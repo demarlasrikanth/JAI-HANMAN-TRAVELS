@@ -8,6 +8,7 @@ import {ContactUsComponent} from "./contact-us/contact-us.component";
 import {AdminLoginComponent} from "./admin-login/admin-login.component";
 import {UserProfileComponent} from "./user/user-profile/user-profile.component";
 import {AdminDashboardComponent} from "./admin-login/admin-dashboard/admin-dashboard.component";
+import {UsersDataComponent} from "./admin-login/users-data/users-data.component";
 
 
 const routes:Routes =[
@@ -40,6 +41,10 @@ const routes:Routes =[
   {
     path:'dashboard',
     component:AdminDashboardComponent
+  },
+  {
+    path:'users',
+    component:UsersDataComponent
   }
 
 
