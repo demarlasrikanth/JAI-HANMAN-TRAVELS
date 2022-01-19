@@ -26,7 +26,7 @@ export class UserLoginComponent implements OnInit {
 
   doLogin() {
     if (this.loginUser.valid) {
-      console.log(this.loginUser.value)
+      console.log("user data...",this.loginUser.value)
       this.userService.login(this.loginUser.value)
     }
   }

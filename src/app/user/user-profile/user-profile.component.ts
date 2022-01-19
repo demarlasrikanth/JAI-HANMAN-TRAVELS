@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../user.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 
 @Component({
@@ -8,14 +9,22 @@ import {UserService} from "../../user.service";
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-  private b: any;
+  currentUser: any = {};
 
+  constructor(private User: UserService, private routed: ActivatedRoute, private router: Router) {
+    let id = this.routed.snapshot.paramMap.get('id');
+    this.User.getUserProfile(id).subscribe(r => {
+      this.currentUser = r;
+    })
 
-
-  constructor(private User:UserService) {
   }
 
   ngOnInit(): void {
 
+  }
+
+
+  logout() {
+    this.User.doLogout()
   }
 }

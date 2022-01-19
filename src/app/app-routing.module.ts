@@ -35,7 +35,7 @@ const routes:Routes =[
     component:AdminLoginComponent
   },
   {
-    path:'userProfile',
+    path:'userProfile/:id',
     component:UserProfileComponent
   },
   {

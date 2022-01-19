@@ -1,6 +1,10 @@
-<div class="p-4">
-  <div class="container">
-    <h1>Hi</h1>
-    <p>You're logged in with Angular 10!!</p>
+<div class="container">
+  <div class="row">
+    <div class="inner-main">
+      <h2 class="mb-4">User Profile</h2>
+      <p><strong>Name:</strong> {{currentUser.email}}</p>
+      <p><strong>Email:</strong></p>
+    </div>
+    <p-button (onClick)="logout()">logoff</p-button>
   </div>
 </div>
