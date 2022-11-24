@@ -3,19 +3,18 @@
     <h2 style="text-align: center; color: whitesmoke;">Login</h2>
     <div class="flex justify-content-center ">
       <span class="p-inputgroup-addon" style><i class="pi pi-user"></i></span>
-      <input type="text" placeholder="Email Id"
-             style="margin:5px 0;" formControlName="email" pInputText>
+      <input type="text" placeholder="Email Id" style="margin:5px 0;" formControlName="email" pInputText>
     </div>
     <div class="flex justify-content-center " style="margin:5px 0;">
       <span class="p-inputgroup-addon" style><i class="pi pi-lock"></i></span>
-      <p-password placeholder="password" [toggleMask]="false" [feedback]="false"
-                  formControlName="password"></p-password>
+      <p-password placeholder="password" [toggleMask]="false" [feedback]="false" formControlName="password">
+      </p-password>
     </div>
     <div class="flex justify-content-center">
-      <button pButton pRipple label="Login" class="p-button-outlined p-button-rounded"
-              (click)="doLogin()">
+      <button pButton pRipple label="Login" class="p-button-outlined p-button-rounded" (click)="doLogin()">
       </button>
-
+      <button pButton pRipple label="Login" class="p-button-outlined p-button-rounded" (click)="doLogin()">
+      </button>
     </div>
   </form>
 </p-card>
